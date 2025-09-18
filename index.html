@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion Amendes Football</title>
+    <title>FC Vetroz - Gestion des Amendes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -68,11 +68,6 @@
             padding: 20px;
             margin-bottom: 25px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
         }
         
         h2 {
@@ -152,15 +147,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background-color 0.2s;
-        }
-        
-        .player-item:hover, .fine-item:hover {
-            background-color: #f8f9fa;
-        }
-        
-        .player-item:last-child, .fine-item:last-child {
-            border-bottom: none;
         }
         
         .player-info {
@@ -225,7 +211,6 @@
             color: #6c757d;
             cursor: pointer;
             font-size: 1.1rem;
-            transition: color 0.2s;
             padding: 8px;
             border-radius: 50%;
         }
@@ -300,7 +285,6 @@
             gap: 5px;
             font-size: 0.85rem;
             border-radius: 10px;
-            transition: all 0.3s;
         }
         
         .nav-item.active {
@@ -314,7 +298,6 @@
         
         .page {
             display: none;
-            animation: fadeIn 0.5s ease;
         }
         
         .page.active {
@@ -337,43 +320,6 @@
             margin-bottom: 15px;
         }
         
-        .github-info {
-            background: linear-gradient(135deg, #24292e 0%, #0d1117 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: 20px;
-        }
-        
-        .github-info h3 {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .github-steps {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        
-        .github-steps li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        
-        code {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
         @media (min-width: 768px) {
             .container {
                 max-width: 600px;
@@ -390,7 +336,7 @@
     <header>
         <div class="logo">
             <i class="fas fa-futbol"></i>
-            <h1>Amendes Foot</h1>
+            <h1>FC Vetroz - Amendes</h1>
         </div>
         <p>Gestion des amendes du club</p>
     </header>
@@ -407,10 +353,6 @@
         <a href="#" class="nav-item" data-page="stats">
             <i class="fas fa-chart-bar"></i>
             <span>Stats</span>
-        </a>
-        <a href="#" class="nav-item" data-page="github">
-            <i class="fab fa-github"></i>
-            <span>GitHub</span>
         </a>
     </div>
 
@@ -510,44 +452,6 @@
                 </ul>
             </div>
         </div>
-
-        <!-- Page GitHub -->
-        <div class="page" id="github-page">
-            <div class="card">
-                <h2><i class="fab fa-github"></i> Publication sur GitHub</h2>
-                <p>Pour publier cette application sur GitHub Pages :</p>
-                
-                <div class="github-info">
-                    <h3><i class="fas fa-check-circle"></i> Étapes à suivre</h3>
-                    <ol class="github-steps">
-                        <li>Allez sur <a href="https://github.com" style="color: #58a6ff;">github.com</a> et créez un compte si nécessaire</li>
-                        <li>Créez un nouveau dépôt en cliquant sur le bouton <code>New</code></li>
-                        <li>Donnez un nom à votre dépôt (ex: "amendes-foot")</li>
-                        <li>Choisissez <code>Public</code> et cochez <code>Add a README file</code></li>
-                        <li>Cliquez sur <code>Create repository</code></li>
-                        <li>Cliquez sur <code>Add file</code> → <code>Upload files</code></li>
-                        <li>Téléversez ce fichier HTML (renommez-le en <code>index.html</code>)</li>
-                        <li>Allez dans <code>Settings</code> → <code>Pages</code></li>
-                        <li>Dans <code>Source</code>, sélectionnez <code>Deploy from a branch</code></li>
-                        <li>Dans <code>Branch</code>, choisissez <code>main</code> et dossier <code>/ (root)</code></li>
-                        <li>Cliquez sur <code>Save</code> et attendez quelques minutes</li>
-                        <li>Retournez dans <code>Settings</code> → <code>Pages</code> pour voir l'URL de votre site</li>
-                    </ol>
-                    
-                    <p>Votre application sera accessible à l'adresse : <code>https://votrepseudo.github.io/nom-du-depot</code></p>
-                </div>
-                
-                <div style="margin-top: 20px;">
-                    <h3>Avantages de GitHub Pages</h3>
-                    <ul class="github-steps">
-                        <li><strong>Gratuit</strong> - Pas de frais d'hébergement</li>
-                        <li><strong>Accessible partout</strong> - Votre application sera en ligne</li>
-                        <li><strong>Simple</strong> - Pas besoin de configuration complexe</li>
-                        <li><strong>HTTPS</strong> - Connexion sécurisée par défaut</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script>
@@ -567,7 +471,9 @@
         // Initialisation
         document.addEventListener('DOMContentLoaded', function() {
             // Configuration de la date du jour par défaut
-            document.getElementById('fine-date').valueAsDate = new Date();
+            const today = new Date();
+            const formattedToday = today.toISOString().substr(0, 10);
+            document.getElementById('fine-date').value = formattedToday;
             
             // Chargement des données
             renderPlayers();
@@ -719,7 +625,9 @@
                 finePlayerSelect.value = '';
                 fineMotifInput.value = '';
                 fineAmountInput.value = '';
-                fineDateInput.valueAsDate = new Date();
+                const today = new Date();
+                const formattedToday = today.toISOString().substr(0, 10);
+                fineDateInput.value = formattedToday;
             }
         }
         
